@@ -54,7 +54,7 @@ validator.cleanCi("3.566.999-2");
 
 ## Contribución
 
-1. Realice un fork del proyecto (<https://github.com/fabdelgado/ci_uy/fork>)
+1. Realice un fork del proyecto (<https://github.com/fabdelgado/ciuy/fork>)
 2. Establezca una rama para trabajar (`git checkout -b my-new-feature`)
 3. Confirme sus cambios (`git commit -am 'Add some feature'`)
 4. Suba los cambios (`git push origin my-new-feature`)
