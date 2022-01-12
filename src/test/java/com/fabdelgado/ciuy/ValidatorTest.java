@@ -35,6 +35,8 @@ class ValidatorTest {
     void validationDigit() {
         Validator validator = new Validator();
 
+        assertEquals(8, validator.validationDigit("9.105.702-8"));
+        assertEquals(4, validator.validationDigit("918.596-4"));
         assertEquals(6, validator.validationDigit("45022186"));
         assertEquals(5, validator.validationDigit("6032655"));
         assertEquals(1, validator.validationDigit("251821"));
