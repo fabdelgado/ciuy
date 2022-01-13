@@ -1,4 +1,4 @@
-# Validador de c&eacute;dulas de identidad de Uruguay
+# Librería java para validar c&eacute;dulas de identidad de Uruguay
 
 ## Instalación
 
