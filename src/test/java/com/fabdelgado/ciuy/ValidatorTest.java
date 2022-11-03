@@ -15,6 +15,14 @@ class ValidatorTest {
         assertTrue(validator.validateCi("6032655"));
         assertFalse(validator.validateCi("6032652"));
         assertFalse(validator.validateCi("17367033"));
+        assertTrue(validator.validateCi(10958718));
+        assertTrue(validator.validateCi(6032655));
+        assertFalse(validator.validateCi(6032652));
+        assertFalse(validator.validateCi(17367033));
+        assertTrue(validator.validateCi(10958718L));
+        assertTrue(validator.validateCi(6032655L));
+        assertFalse(validator.validateCi(6032652L));
+        assertFalse(validator.validateCi(17367033L));
     }
 
     @Test

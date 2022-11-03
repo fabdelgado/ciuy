@@ -57,4 +57,24 @@ public class Validator {
         String ci = String.valueOf(randomNumber).substring(0, 7) + this.validationDigit(String.valueOf(randomNumber));
         return ci;
     }
+
+    /**
+     * Returns if the identification number is valid
+     *
+     * @param ci Long version of the identity card
+     * @return
+     */
+    public boolean validateCi(Long ci) {
+        return validateCi(String.valueOf(ci));
+    }
+
+    /**
+     * Returns if the identification number is valid
+     *
+     * @param ci Integer version of the identity card
+     * @return
+     */
+    public boolean validateCi(Integer ci) {
+        return validateCi(String.valueOf(ci));
+    }
 }
