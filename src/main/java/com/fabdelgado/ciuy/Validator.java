@@ -1,16 +1,21 @@
 package com.fabdelgado.ciuy;
 
+import java.util.Objects;
 import java.util.Random;
+
+import com.fabdelgado.ciuy.Exceptions.EmptyCIException;
+import com.fabdelgado.ciuy.Exceptions.NullCIException;
 
 public class Validator {
 
     /**
      * Returns if the identification number is valid
      *
-     * @param ci
+     * @param ci String
      * @return boolean
      */
     public boolean validateCi(String ci) {
+        validateInput(ci);
         String cleanCi = this.cleanCi(ci);
         char validationDigit = cleanCi.charAt(cleanCi.length() - 1);
 
@@ -18,9 +23,25 @@ public class Validator {
     }
 
     /**
+     * Validate ci is not empty or null
+     *
+     * @param ci String
+     * @return boolean
+     */
+    public boolean validateInput(String ci) {
+        if (Objects.isNull(ci)) {
+            throw new NullCIException();
+        }
+        if (ci.isEmpty()) {
+            throw new EmptyCIException();
+        }
+        return true;
+    }
+
+    /**
      * Clean up removing all characters except numbers
      *
-     * @param ci
+     * @param ci String
      * @return String
      */
     public String cleanCi(String ci) {
