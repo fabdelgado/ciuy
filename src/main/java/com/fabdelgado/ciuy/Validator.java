@@ -83,7 +83,7 @@ public class Validator {
      * Returns if the identification number is valid
      *
      * @param ci Long version of the identity card
-     * @return
+     * @return boolean
      */
     public boolean validateCi(Long ci) {
         return validateCi(String.valueOf(ci));
@@ -93,7 +93,7 @@ public class Validator {
      * Returns if the identification number is valid
      *
      * @param ci Integer version of the identity card
-     * @return
+     * @return boolean
      */
     public boolean validateCi(Integer ci) {
         return validateCi(String.valueOf(ci));
