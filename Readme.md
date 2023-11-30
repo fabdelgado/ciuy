@@ -8,14 +8,14 @@
   <dependency>
     <groupId>com.fabdelgado</groupId>
     <artifactId>ciuy</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
   </dependency>
 ```
 
 2. Uso mediante Gradle:
 
 ```yml
-  implementation 'com.fabdelgado:ciuy:1.2'
+  implementation 'com.fabdelgado:ciuy:1.3'
 ```
 
 ## Modo de uso
