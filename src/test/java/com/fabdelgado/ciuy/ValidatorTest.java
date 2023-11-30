@@ -67,14 +67,12 @@ class ValidatorTest {
 
     @Test
     void nullCI() {
-        assertThrows(NullCIException.class, () -> validator.validateCi(null));
+        assertThrows(NullCIException.class, () -> validator.validateCi((Long)null));
     }
 
     @Test
     void emptyCI() {
         Validator validator = new Validator();
-        assertThrows(EmptyCIException.class, () -> validator.validateCi(new String()));
         assertThrows(EmptyCIException.class, () -> validator.validateCi(""));
     }
-
 }

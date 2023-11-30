@@ -23,19 +23,19 @@ public class Validator {
     }
 
     /**
-     * Validate ci is not empty or null
+     * Validates that the CI is not empty or null.
      *
-     * @param ci String
-     * @return boolean
+     * @param ci The CI as a String.
+     * @throws NullCIException if the CI is null.
+     * @throws EmptyCIException if the CI is empty.
      */
-    public boolean validateInput(String ci) {
+    public void validateInput(String ci) {
         if (Objects.isNull(ci)) {
             throw new NullCIException();
         }
         if (ci.isEmpty()) {
             throw new EmptyCIException();
         }
-        return true;
     }
 
     /**
@@ -75,8 +75,7 @@ public class Validator {
      */
     public String randomCi() {
         int randomNumber = 10000000 + new Random().nextInt(90000000);
-        String ci = String.valueOf(randomNumber).substring(0, 7) + this.validationDigit(String.valueOf(randomNumber));
-        return ci;
+        return String.valueOf(randomNumber).substring(0, 7) + this.validationDigit(String.valueOf(randomNumber));
     }
 
     /**
@@ -86,6 +85,9 @@ public class Validator {
      * @return boolean
      */
     public boolean validateCi(Long ci) {
+        if (ci == null) {
+            throw new NullCIException();
+        }
         return validateCi(String.valueOf(ci));
     }
 
